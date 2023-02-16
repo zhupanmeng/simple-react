@@ -1,7 +1,9 @@
 import Component from '../react/component.js'
+import { diff } from './diff.js'
 export class ReactDOM {
-    static render(vnode, container) {
-        return container.appendChild(this._render(vnode))
+    static render(vnode, container, dom) {
+        // return container.appendChild(this._render(vnode))
+        return diff(dom, vnode,container)
     }
     static createComponent(tag, props) { // vnode中的tag才是真正的处理函数
         let inst = null

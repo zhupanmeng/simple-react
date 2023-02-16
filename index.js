@@ -1,12 +1,14 @@
 import React from './react'
 import { ReactDOM } from './react-dom'
 
-
-// const ele = (
-//     <div id="con" title="zpm" style={{ width: 200, height: '180px', background: 'red' }} onClick={c}>
-//         hello,<span>React</span>
-//     </div>
-// )
+function c() {
+    console.log('123123123')
+}
+const ele = (
+    <div id="con" title="zpm" style={{ width: 200, height: '180px', background: 'red' }} onClick={c}>
+        hello,<span>React</span>
+    </div>
+)
 
 // function Home() {
 //     return (
@@ -47,7 +49,8 @@ class Home extends React.Component {
         )
     }
 }
+// console.log(<Home name='title' />)
 // console.log(<Home />)  // 对于一个函数式组件，babel依然会帮我们编译识别，转换为vnode对象
 // ReactDOM.render(<Funcom name='title' />, document.getElementById('root'))
-ReactDOM.render(<Home name='title' />, document.getElementById('root'))
-// ReactDOM.render(ele, document.getElementById('root'))
+// ReactDOM.render(<Home name='title' />, document.getElementById('root'))
+ReactDOM.render(ele, document.getElementById('root'))
